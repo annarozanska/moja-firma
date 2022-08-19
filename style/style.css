@@ -110,7 +110,7 @@ html, body {
     color:#000;
 }
 
-.wrapper-main-about{
+.wrapper-about-us{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +118,7 @@ html, body {
     background: #f1f1f1;
 }
 
-.main-about{
+.about-us-main-box{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -127,13 +127,13 @@ html, body {
     height: 553px;
 }
 
-.about-us{
+.about-us-headline{
     align-items: flex-start;
     width: 1068px;
     height: 35px;
 }
 
-.about-us h2{   
+.about-us-headline h2{   
     font-size: 36px;
     font-weight: 700;
     color: #152d41;
