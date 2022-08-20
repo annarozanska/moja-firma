@@ -1,282 +1,401 @@
-html, body {
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
+:root {
+	--white: #fff;
+	--lightwhite: #f1f1f1;
+	--grey: #4e4e4e;
+	--lightgray: #c4c4c4;
+	--blue: #152d41;
+	--lightblue: #405d78;
 }
 
-.nav-wrapp{
-    /*margin: 0 auto;
-    width: 1280px;*/
-    display: flex;
-    align-items: center;  
-    height: 50px;
-    background: #4e4e4e;
+html,
+body {
+	font-size: 10px;
+	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
 }
 
-.nav-wrapp h1{
-    flex: 1;
-    font-size: 18px;
-    margin-left: 60px;
-    cursor: pointer;
+nav {
+	width: 100%;
+	background: var(--grey);
 }
 
-.nav-wrapp a{
-    color: #fff;
-    text-decoration: none;
+.nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 94%;
+	height: 50px;
+	margin: 0 auto;
 }
 
-.nav-wrapp .nav-list{ 
-    margin-right: 40px;
-    list-style: none;
+.nav-wrapper h1 {
+	font-size: 1.8rem;
+	color: var(--white);
 }
 
-.nav-wrapp .list-item{
-    display: inline-block;
-    margin: 0 20px;
-    text-align: center;
-    font-size: 18px;
-    cursor: pointer;
+.nav-wrapper .nav-list {
+	display: none;
+	list-style: none;
 }
 
-.nav-wrapp .list-item a{
-    color: #f1f1f1;
+.nav-wrapper .list-item {
+	display: inline-block;
+	font-size: 1.8rem;
+	margin-right: 12px;
+	cursor: pointer;
 }
 
-.nav-wrapp .list-item:nth-child(3) a{
-    cursor: not-allowed;
+.nav-wrapper .list-item a {
+	text-decoration: none;
+	color: var(--lightwhite);
 }
 
-.nav-wrapp .list-item:hover a{
-    color:#c4c4c4;
+.nav-wrapper .list-item:nth-child(3) a {
+	cursor: not-allowed;
 }
 
-.header-img{
-    position: relative;
-    height: 100vh;
-    background: url(https://langero.com/wp-content/uploads/2019/08/forest-547363_1920.jpg);
-    background-size: cover;
-    background-position: left;
+.nav-wrapper .list-item:hover a {
+	color: var(--lightgray);
 }
 
-.header-bg{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.15);
+.header-img {
+	position: relative;
+	height: 100vh;
+	background: url(https://langero.com/wp-content/uploads/2019/08/forest-547363_1920.jpg);
+	background-size: cover;
+	background-position: left;
 }
 
-.header-text {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    top: 50%;
-    left: 60px;
-    width: 577px;
-    height: 215px;
-    transform: translateY(-50%);
-    color: #fff;
+.header-bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.15);
 }
 
-.header-text h1 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+.header-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 94%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 4.2rem;
+	color: var(--white);
 }
 
-.header-text p{
-    font-weight: 700;
-    font-size: 18px;
+.header-headline h1 {
+	font-size: 3.2rem;
+	font-weight: 700;
 }
 
-.header-text .btn{
-    width: 164px;
-    height: 40px;
-    border: 3px solid #fff;
-    background: transparent;
-    cursor: pointer;
-    transition: all 1s ease;
+.header-headline p {
+	font-size: 1.8rem;
+	font-weight: 700;
+	padding: 2.1rem 0;
 }
 
-.header-text .btn a{
-    color: #fff;
-    text-decoration: none;
+.btn {
+	width: 16rem;
+	height: 4rem;
+	border: 3px solid var(--white);
+	background: transparent;
+	cursor: pointer;
+	transition: all 1s ease;
 }
 
-.header-text .btn:hover{
-    background: #fff;
+.header-wrapper .btn a {
+	color: var(--white);
+	text-decoration: none;
 }
 
-.header-text .btn:hover a{
-    color:#000;
+.header-wrapper .btn:focus {
+	background: var(--white);
 }
 
-.wrapper-about-us{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 574px;
-    background: #f1f1f1;
+.header-wrapper .btn:focus a {
+	color: #000;
 }
 
-.about-us-main-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 1192px;
-    height: 553px;
+.wrapper-about-us {
+	width: 100%;
+	height: max-content;
+	background: var(--lightwhite);
 }
 
-.about-us-headline{
-    align-items: flex-start;
-    width: 1068px;
-    height: 35px;
+.about-us-main-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 94%;
+	padding-top: 2rem;
+	margin: 0 auto;
 }
 
-.about-us-headline h2{   
-    font-size: 36px;
-    font-weight: 700;
-    color: #152d41;
+.about-us-headline {
+	height: max-content;
+	padding-bottom: 2rem;
 }
 
-.about-us-box{
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   width: 1068px;
-   height: 197px;
+.about-us-headline h2 {
+	text-align: center;
+	font-size: 3.2rem;
+	font-weight: 700;
+	color: var(--blue);
 }
 
-.about-us-text{
-    display: flex;
-    flex-direction: column;
-    width: 866px;
-    height: 104px;
-    margin-left: 30px;
+.about-us-box {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: max-content;
+	margin: 0 auto;
+	padding: 2rem 0;
 }
 
-.about-us-text p{
-    font-size: 18px;
-    padding: 21px 0;
-    color: #152d41;
+.about-us-text {
+	display: flex;
+	flex-direction: column;
+	text-align: justify;
 }
 
-.about-us-bg{
-    width: 197px;
-    height: 197px;
-    border-radius: 50%;
-    background: url(https://cdn.pixabay.com/photo/2020/11/30/17/21/businessman-5791566_960_720.jpg);
-    background-size: cover;
-    background-position: top;
+.about-us-text p,
+.about-us-text h3 {
+	font-size: 1.8rem;
+	padding: 10px 0;
+	color: var(--blue);
 }
 
-.left div:nth-child(1){
-    display: flex;
-    text-align: end;
-    margin-right: 30px;
-    flex-wrap: nowrap;
+.about-us-text h3 {
+	padding-top: 2rem;
 }
 
-.left div:nth-child(2){
-    background: url(https://cdn.pixabay.com/photo/2017/11/02/06/37/beautiful-2910260_960_720.jpg);
-    background-size: cover;
-    background-position: center;
+.about-us-bg {
+	width: 197px;
+	height: 197px;
+	border-radius: 50%;
+	background: url(https://cdn.pixabay.com/photo/2020/11/30/17/21/businessman-5791566_960_720.jpg);
+	background-size: cover;
+	background-position: top;
 }
 
-.wrapper-offer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 689px;
-    background: #405d78;
+.about-us-box:nth-child(odd) .about-us-bg {
+	background: url(https://cdn.pixabay.com/photo/2017/11/02/06/37/beautiful-2910260_960_720.jpg);
+	background-size: cover;
+	background-position: center;
 }
 
-.offer-text{
-    align-self: flex-start;
-    margin: 0 auto;
-    width: 1068px;
+.wrapper-offer {
+	width: 100%;
+	height: max-content;
+	padding: 1rem 0;
+	background: var(--lightblue);
 }
 
-.offer-text h2{
-    font-size: 36px;
-    font-weight: 700;
-    padding-bottom: 40px;
-    color: #fff;
+.offer-main-box {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 94%;
+	padding-top: 2rem;
+	margin: 0 auto;
 }
 
-.offer-box{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 720px;
-    height: 451.17px;
-    align-items: center;
+.offer-headline {
+	height: max-content;
+	padding-bottom: 2rem;
 }
 
-.offer-box-item{
-    text-align: center;
-    line-height: 193.78px;
-    width: 198px;
-    height: 193.78px;
-    background: #F1F1F1;
-    transition: all 1s ease;
+.offer-headline h2 {
+	text-align: center;
+	font-size: 2.6rem;
+	font-weight: 700;
+	color: var(--white);
 }
 
-.offer-box-item:hover{
-    transform: scale(1.05);
+.offer-box {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	height: max-content;
+	margin: 0 auto;
 }
 
-
-/* czerwona kropka i napis nowość zrobione jako position: absolute, aby móc przenosić na inne kwadraty z oferty */
-.red-box{
-    position: relative;
+.offer-box-item {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 238.88px;
+	height: 231.66px;
+	margin: 10px 2px;
+	background: var(--lightwhite);
+	transition: all 1s ease;
 }
 
-.red-box span{
-    position: absolute;
-    transform: translateX(-100%);
-    bottom: -10%;
+.offer-box-item p {
+	font-size: 2.4rem;
 }
 
-.red-point{
-    position: absolute;
-    top:-10px;
-    left:-10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: red;
+.offer-box-item p:nth-child(2) {
+	font-size: 18px;
 }
 
-
-.footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 71px;
-    background: #4E4E4E;;
+.offer-box-item:focus {
+	transform: scale(1.05);
 }
 
-.footer-text{
-    margin: 0 150px;
-    color: #fff;
+.red-box {
+	position: relative;
 }
 
-.icons-box{
-    margin: 0 150px;
+.red-point {
+	position: absolute;
+	top: -9.5px;
+	left: -9.5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: red;
 }
 
-.icons-box a{
-    font-size: 25px;
-    cursor: pointer;
+footer {
+	width: 100%;
+	padding: 2rem 0rem;
+	background: var(--grey);
 }
 
-.icons-box i{
-    padding: 10px;
-    color: #fff;
+.wrapper-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 94%;
+	height: 70px;
+	padding: 1rem 0;
+	margin: 0 auto;
 }
 
-.icons-box i:hover{
-    color: #c4c4c4;
+.footer-text p {
+	text-align: center;
+	font-size: 1.2rem;
+	color: var(--white);
+}
+
+.icons-box a {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.icons-box i {
+	padding: 1rem;
+	color: var(--white);
+	transition: all easy;
+}
+
+.icons-box i:focus {
+	color: var(--lightgray);
+}
+
+@media screen and (min-width: 360px) {
+	.header-headline h1,
+	.about-us-headline h2,
+	.offer-headline h2 {
+		font-size: 3.6rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.nav-wrapper .nav-list {
+		display: block;
+	}
+
+	.header-wrapper .btn:hover {
+		background: var(--white);
+	}
+
+	.header-wrapper .btn:hover a {
+		color: #000;
+	}
+
+	.about-us-main-box {
+		align-items: flex-start;
+	}
+
+	.about-us-box {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.about-us-text {
+		flex: 2;
+	}
+
+	.about-us-text h3 {
+		padding-top: 0;
+	}
+
+	.about-us-box:nth-child(odd) {
+		flex-direction: row-reverse;
+	}
+
+	.about-us-box:nth-child(odd) .about-us-text {
+		text-align: right;
+		margin-right: 30px;
+	}
+
+	.about-us-box:nth-child(even) .about-us-text {
+		text-align: left;
+		margin-left: 30px;
+	}
+
+	.offer-box {
+		width: 90%;
+	}
+
+	.offer-box-item {
+		width: 198px;
+		height: 193.78px;
+	}
+
+	.offer-box-item:hover {
+		transform: scale(1.05);
+	}
+
+	.wrapper-footer {
+		flex-direction: row;
+		justify-content: space-between;
+		height: 2rem;
+	}
+
+	.icons-box i:hover {
+		color: var(--lightgray);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.header-wrapper,
+	.about-us-main-box,
+	.offer-main-box {
+		width: 960px;
+	}
+
+	.header-wrapper {
+		line-height: 5.2rem;
+	}
+
+	.offer-box {
+		width: 720px;
+	}
+
+	.header-headline p {
+		padding: 3.2rem 0;
+	}
 }
